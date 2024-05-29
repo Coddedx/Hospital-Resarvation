@@ -1,0 +1,81 @@
+﻿@using HospitalResarvation.Web.Areas.Management.ViewModels
+@* @model Appointment *@
+@model AppointmentViewModel
+
+@* @{
+	List<PatientViewModel> patients = ViewBag.CurPatient;
+}
+ *@ 
+@* = ViewBag.CurPatient*@
+
+
+<div class="row">
+	<div class="col-md-6">
+		<form class="d-flex" asp-action="Create" asp-controller="Appointment">
+			<input name="searchString" class="form-control me-1" type="search" placeholder="Hasta Tc" aria-label="Search">
+			<button class="btn btn-dark" type="submit" name="action" value="search">Hasta Ara</button>
+		</form>
+	</div>
+</div>
+<br />
+<br />
+<br />
+
+<div class="card">
+		<div class="card-body">			
+			<form method="post">
+			
+				<input type="hidden" asp-for="Id" />   @* edit sayfasında yaptığımız gibi arama yapıp hasta bilgileri öyle bulunursa formu ona göre direk doldurcak tekrar doldurmya gerek olmucak??? *@
+
+					<div class="form-group">
+						<label asp-for="PatientFirstName">Hasta Adı</label>
+					<input asp-for="PatientFirstName" class="form-control" placeholder="Ad">
+					<span asp-validation-for="PatientFirstName" class="text-danger"></span>
+					</div>
+
+				<div class="form-group">
+					<label asp-for="PatientLastName">Hasta Soyadı</label>
+					<input asp-for="PatientLastName" class="form-control" placeholder="Soyad">
+					<span asp-validation-for="PatientLastName" class="text-danger"></span>
+				</div>
+
+
+				<div class="form-group">
+					<label asp-for="PatientTc">Hasta Tc</label>
+					<input asp-for="PatientTc" class="form-control" placeholder="Tc">
+					<span asp-validation-for="PatientTc" class="text-danger"></span>
+				</div>
+
+				<div class="form-group">
+					<label asp-for="PatientPhone">Hasta Telefon</label>
+					<input asp-for="PatientPhone" class="form-control" placeholder="Telefon">
+					<span asp-validation-for="PatientPhone" class="text-danger"></span>
+				</div>
+
+				<div class="form-group">
+					<label asp-for="PatientAdress">Hasta Adres</label>
+					<input asp-for="PatientAdress" class="form-control" placeholder="Adres">
+					<span asp-validation-for="PatientAdress" class="text-danger"></span>
+				</div>
+
+
+				<div class="mb-3">
+					<label asp-for="DoctorId" >Doktor Adı</label>
+				<select asp-for="DoctorId" asp-items="@ViewBag.DoctorId" class="form-control"></select>
+			</div>
+
+
+			<div class="mb-3">
+				<label asp-for="DoctorId">Departman</label>
+				<select asp-for="DoctorId" asp-items="@ViewBag.DoctorId" class="form-control"></select>
+			</div>
+
+				<div class="col-12">
+					<div class="d-grid">
+						<button type="submit" name="action" value="create" class="btn btn-dark btn-lg px-5"><i class="bx bxs-	lock-open"></i>Kaydet</button>
+					</div>
+				</div>
+				<hr>
+			</form>
+		</div>
+</div>

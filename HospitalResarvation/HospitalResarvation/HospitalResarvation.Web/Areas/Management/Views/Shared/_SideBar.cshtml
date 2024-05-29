@@ -1,0 +1,65 @@
+﻿		<!--sidebar-wrapper-->
+<div class="sidebar-wrapper" data-simplebar="true">
+	<div class="sidebar-header">
+		<div class="">
+			<img src="~/~/Management/images/logo-icon.png" class="logo-icon-2" alt="" />
+		</div>
+		<div>
+			<h4 class="logo-text">Syndash</h4>
+		</div>
+		<a href="javascript:;" class="toggle-btn ms-auto">
+			<i class="bx bx-menu"></i>
+		</a>
+	</div>
+
+	<!--navigation-->
+	<ul class="metismenu" id="menu">
+		<li>
+			<a href="javascript:;" class="has-arrow">
+				<div class="parent-icon icon-color-1">
+					<i class="bx bx-home-alt"></i>
+				</div>
+				<div class="menu-title">Dashboard</div>
+			</a>
+			<ul>
+				<li>
+					<a asp-area="Management" asp-controller="Dashboard" asp-action="Index">
+					<i class="bx bx-right-arrow-alt"> </i>Rapor</a>
+				</li>
+				
+			</ul>
+		</li>
+		<li class="menu-label">Web Apps</li>
+		<li>
+			<a asp-area="Management" asp-controller="Hospital" asp-action="Index">
+				<div class="parent-icon icon-color-2">
+					<i class="bx bx-envelope"></i>
+				</div>
+				<div class="menu-title">Hastane</div>
+			</a>			
+		</li>
+
+		<li>
+			<a asp-area="Management" asp-controller="Doctor" asp-action="Index">
+				<div class="parent-icon icon-color-2">
+					<i class="bx bx-envelope"></i>
+				</div>
+				<div class="menu-title">Doktorlar</div>
+			</a>			
+		</li>
+
+		<li>
+			<a asp-area="Management" asp-controller="Appointment" asp-action="Index">
+				<div class="parent-icon icon-color-2">
+					<i class="bx bx-envelope"></i>
+				</div>
+				<div class="menu-title">Randevular</div>
+			</a>			
+		</li>
+
+
+	</ul>
+	<!--end navigation-->
+
+</div>
+<!--end sidebar-wrapper-->

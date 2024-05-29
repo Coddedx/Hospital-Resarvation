@@ -1,0 +1,23 @@
+﻿@model Doctor
+
+<h1>Doktor Detay</h1>
+
+
+<p>@Model.FirstName</p>
+<p>@Model.LastName</p>
+<p>@Model.Title</p>
+<p>@ViewBag.DepartmentId</p>
+<p>@Model.Paycheck</p>
+<p>@Model.Phone</p>
+<p>@Model.Email</p>
+<p>@Model.Adress</p>
+<p>@Model.CreatedDate</p>
+<p>@Model.UpdatedDate</p>
+
+<h1>Silmek istediğinizden emin misiniz?</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Id"/>
+    <input type="submit" value="Sil"  class="btn btn-danger" />
+   
+</form>
