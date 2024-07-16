@@ -83,7 +83,7 @@ namespace HospitalResarvation.Web.Areas.Management.Controllers
 
 						return View(appointmentViewModel);
 					}
-					//ViewBag.CurPatient = SearchedPatient;  //hoca create de @ ile kullandığı için gerek kalmadı???????????
+					//ViewBag.CurPatient = SearchedPatient;  
 					return View();
 				}
 
